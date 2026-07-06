@@ -1,27 +1,28 @@
+
 # 03 — Detection & minimization strategies
 
-1) Encadrement fort (strong framing)
-- Idea: Tell the model its limits and the date cutoff.
+1) Strong framing
+- Idea: Tell the model its limits and the data cutoff date.
 - Example prompt:
-"Tu n'as accès qu'aux informations jusqu'en janvier 2026. Si tu n'es pas sûr d'un fait, dis 'je ne suis pas sûr'. Donne les 5 modules principaux du BTS NDRC que tu connais."
+"You only have access to information up to January 2026. If you are not sure about a fact, say 'I am not sure'. Give me the 5 main modules of the BTS NDRC program that you know."
 
-2) Demander la confiance (ask for confidence)
-- Idea: Force the model to rate its confidence for each claim.
+2) Ask for confidence
+- Idea: Force the model to state its confidence for each claim.
 - Example prompt:
-"Pour chaque affirmation, indique ta confiance sur 1-10. Si < 6, ajoute 'je ne suis pas sûr'." 
+"For each claim, give a confidence score from 1 to 10. If confidence < 6, add 'I am not sure'."
 
-3) Demander des sources (require sources)
-- Idea: Ask the model to cite sources or explicitly say when it cannot.
+3) Require sources
+- Idea: Ask the model to provide sources or explicitly say when it cannot.
 - Example prompt:
-"Pour chaque fait cité, fournis une source (URL ou référence). Si tu n'as pas de source, dis 'pas de source vérifiable'."
+"For each fact you list, provide a source (URL or reference). If you don't have a verifiable source, say 'no verifiable source'."
 
-4) Vérification externe (external verification)
-- Idea: Use Google, Wikipedia, ou bases de données officielles to confirm claims.
+4) External verification
+- Idea: Use Google, Wikipedia, or official databases to confirm claims.
 - Example workflow:
   - Ask the model for a short answer.
-  - Verify each factual point with a quick search.
+  - Verify each factual point with a quick web search.
   - Mark points that cannot be verified as 'unconfirmed'.
 
-Use these strategies together: e.g., strong framing + ask for confidence + require sources gives the best chance to spot hallucinations quickly.
+Combine strategies for best results: for example, use strong framing + ask for confidence + require sources to increase transparency and spot hallucinations faster.
 
-See also: `04-my-test-cases.md` for example runs of framed vs unframed prompts.
+See also: `04-my-test-cases.md` for example runs (framed vs unframed prompts).

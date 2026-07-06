@@ -1,12 +1,13 @@
+
 # 01 — What is an AI hallucination?
 
 Definition
-An AI hallucination is when a model like Claude writes something that looks fluent and believable but is partially or completely false. The model is not "lying" — it is predicting the next words based on patterns it learned.
+An AI hallucination happens when a model (for example, Claude) generates text that sounds fluent and believable but is partly or completely false. The model does not intend to deceive — it predicts likely words based on patterns it learned during training.
 
 How it works (prediction vs verification)
-Large language models generate text by predicting tokens that statistically follow previous tokens. They are optimized for plausibility, not for checking facts against a database. That means a reply can be very confident-sounding while still being wrong.
+Large language models are token predictors: at each step they choose the next token that is statistically likely given the prompt and context. They are tuned for plausibility, not for fact-checking against an external database. As a result, answers can sound confident while still being incorrect.
 
-A simple analogy
-Think of a writer who has read thousands of travel blogs. They can write a convincing city guide that sounds correct, but they might invent a museum or a street because it "fits" the pattern of what a city description looks like. The writer is good at style and plausibility, not at real-time fact-checking.
+Analogy
+Imagine an author who has read thousands of mystery novels. They become excellent at writing plausible crime scenes, but that does not mean they know actual police procedures. They write what "sounds right" based on patterns, not on verified facts.
 
-See also: `02-types-of-hallucinations.md` for common categories.
+See also: `02-types-of-hallucinations.md` for the common categories of errors.
